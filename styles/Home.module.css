@@ -17,9 +17,19 @@
     border-radius: 5px;
 }
 
-.addToCartButton {
-    margin-top: 10px;
+.cart {
+    margin-top: 20px; /* Add some spacing above the cart */
+}
+
+.cartItem {
+    margin: 10px 0;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.addToCartButton {
+    margin-top: 10px; /* Spacing above the button */
+    padding: 10px; /* Padding for a nicer button size */
     background-color: #28a745; /* Green background */
     color: white; /* White text */
     border: none; /* No border */
@@ -29,4 +39,17 @@
 
 .addToCartButton:hover {
     background-color: #218838; /* Darker green on hover */
+}
+
+.removeButton {
+    margin-top: 5px; /* Space between price and remove button */
+    background-color: #dc3545; /* Red background for remove button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.removeButton:hover {
+    background-color: #c82333; /* Darker red on hover */
 }

@@ -11,10 +11,12 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                 <p>Your cart is empty.</p>
             ) : (
                 <ul>
-                    {cart.map((item, index) => (
-                        <li key={index} className={styles.cartItem}>
-                            {item.name} - ${item.price.toFixed(2)}
-                            <button onClick={() => onRemoveFromCart(item.id)}>Remove</button>
+                    {cart.map((item) => (
+                        <li key={item.id} className={styles.cartItem}>
+                            <div>
+                                <strong>{item.name}</strong> - ${item.price.toFixed(2)}
+                            </div>
+                            <button onClick={() => onRemoveFromCart(item.id)} className={styles.removeButton}>Remove</button> {/* Button under product details */}
                         </li>
                     ))}
                 </ul>
