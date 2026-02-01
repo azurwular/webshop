@@ -3,23 +3,24 @@
 import React, { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
-const Users = () => {
+const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Simulate login logic
+        // Simulate login logic (replace with your actual login logic)
         if (username === "admin" && password === "password") {
             setMessage("Login successful!");
+            // Here you could also redirect the user or perform other actions.
         } else {
             setMessage("Invalid username or password.");
         }
     };
 
     return (
-        <div className={styles.userContainer}>
+        <div className={styles.loginContainer}>
             <h2>Login</h2>
             {message && <p>{message}</p>}
             <form onSubmit={handleLogin}>
@@ -43,11 +44,10 @@ const Users = () => {
                         required
                     />
                 </div>
-                {/* Apply styles to the button */}
                 <button type="submit" className={styles.loginButton}>Log in</button>
             </form>
         </div>
     );
 };
 
-export default Users;
+export default Login;

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import ProductList from './ProductList'; // Import the ProductList component
 import Cart from './Cart'; // Import the Cart component
-import Users from './Users'; // Import the Users component
+import Users from './Login'; // Import the Users component
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
