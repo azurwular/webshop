@@ -1,8 +1,9 @@
-'use client'; // This directive allows the component to use hooks like useState.
+'use client'; // This line marks the entire file as a Client Component
 
 import React, { useState } from 'react';
 import ProductList from './ProductList'; // Import the ProductList component
 import Cart from './Cart'; // Import the Cart component
+import Users from './Users'; // Import the Users component
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
@@ -16,13 +17,14 @@ const Home = () => {
 
     // Function to handle removing products from the cart
     const handleRemoveFromCart = (productId) => {
-        setCart((prevCart) => prevCart.filter(item => item.id !== productId)); // Removes the product from the cart
+        setCart((prevCart) => prevCart.filter(item => item.id !== productId)); // Removes product from cart
         alert(`Product removed from cart!`); // Alert the user
     };
 
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Welcome to the Webshop</h1>
+            <Users /> {/* Render the Users component for login */}
             <ProductList onAddToCart={handleAddToCart} /> {/* Pass the add function to ProductList */}
             <Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} /> {/* Include the Cart component */}
         </div>
