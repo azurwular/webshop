@@ -1,6 +1,8 @@
+/* styles/Home.module.css */
 .title {
     color: blue;
     font-size: 2rem;
+    margin: 20px 0;
 }
 
 .productList {
@@ -10,4 +12,21 @@
 
 .productItem {
     margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.addToCartButton {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.addToCartButton:hover {
+    background-color: #218838; /* Darker green on hover */
 }
